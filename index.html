@@ -310,6 +310,34 @@ html,body{max-width:100%;overflow-x:clip}
  .form-shell{padding:13px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Detalhes do evento Sincor Outubro Rosa — destaque no topo, sem alterar a inscrição */
+.event-banner{
+  display:grid;grid-template-columns:minmax(175px,.85fr) minmax(0,2.5fr);gap:25px;align-items:center;
+  margin:19px 0 0;padding:21px 25px;border:1px solid #edcfd9;border-radius:22px;
+  background:linear-gradient(118deg,rgba(255,255,255,.97),rgba(255,239,245,.95));
+  box-shadow:0 15px 38px rgba(120,49,75,.085);color:#483747;
+}
+.event-banner-head{display:flex;flex-direction:column;gap:4px;min-width:0}
+.event-banner-kicker{color:#b33e66;font-size:.68rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.event-banner-head strong{font-family:"Playfair Display",Georgia,serif;color:#752744;font-size:1.42rem;line-height:1.2;font-weight:600}
+.event-banner-facts{display:grid;grid-template-columns:minmax(90px,.72fr) minmax(88px,.68fr) minmax(0,2.4fr);gap:18px;align-items:start}
+.event-fact{display:flex;flex-direction:column;gap:4px;min-width:0}
+.event-fact-label{font-size:.67rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#b33e66}
+.event-fact>time,.event-fact>span:last-child{font-size:.89rem;line-height:1.5;font-weight:650;color:#493d4b}
+.event-fact-location strong{color:#7f2744;font-weight:800}
+@media(max-width:900px){
+  .event-banner{grid-template-columns:minmax(0,1fr);gap:14px;padding:18px 20px}
+  .event-banner-facts{grid-template-columns:minmax(95px,.7fr) minmax(85px,.6fr) minmax(0,2.5fr)}
+}
+@media(max-width:590px){
+  .event-banner{margin-top:16px;padding:18px 17px;border-radius:18px;gap:13px}
+  .event-banner-head strong{font-size:1.3rem}
+  .event-banner-facts{grid-template-columns:1fr 1fr;column-gap:14px;row-gap:14px}
+  .event-fact-location{grid-column:1/-1;padding-top:11px;border-top:1px solid rgba(196,119,147,.22)}
+  .event-fact>time,.event-fact>span:last-child{font-size:.84rem}
+}
+
 </style></head>
 <body>
 
@@ -329,6 +357,27 @@ html,body{max-width:100%;overflow-x:clip}
 <div aria-hidden="true" class="hero-blossom"></div>
 <div class="container hero-panel">
 <span class="hero-chip"><span aria-hidden="true" class="chip-flower">✿</span> OUTUBRO ROSA · SORTEIO ESPECIAL</span>
+
+<aside class="event-banner" aria-label="Informações do evento Sincor Outubro Rosa">
+  <div class="event-banner-head">
+    <span class="event-banner-kicker">Encontro presencial · Sincor</span>
+    <strong>Outubro Rosa 2026</strong>
+  </div>
+  <div class="event-banner-facts">
+    <div class="event-fact">
+      <span class="event-fact-label">Data</span>
+      <time datetime="2026-10-28">28/10/2026</time>
+    </div>
+    <div class="event-fact">
+      <span class="event-fact-label">Horário</span>
+      <time datetime="08:30">08:30</time>
+    </div>
+    <div class="event-fact event-fact-location">
+      <span class="event-fact-label">Local</span>
+      <span><strong>CIESP Guarulhos</strong> · R. Uruaçu, 100 — Jardim Leila, Guarulhos — SP, CEP 07120-055</span>
+    </div>
+  </div>
+</aside>
 <div class="hero-grid">
 <div class="hero-copy">
 <h1 class="hero-title"><span class="hero-line">O cuidado</span><span class="hero-line">também <em class="accent">floresce</em></span><span class="hero-line">quando estamos</span><span class="hero-line">juntos.</span></h1>
